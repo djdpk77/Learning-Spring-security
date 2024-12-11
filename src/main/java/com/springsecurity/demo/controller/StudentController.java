@@ -1,7 +1,7 @@
-package com.springsecurity.demo;
+package com.springsecurity.demo.controller;
 
+import com.springsecurity.demo.model.Student;
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +24,7 @@ public class StudentController {
         return students;
     }
 
-    @GetMapping("csrf-token")
+    @GetMapping("/csrf-token")
     public CsrfToken getCsrfToken(HttpServletRequest request) {
         return (CsrfToken) request.getAttribute("_csrf");
     }

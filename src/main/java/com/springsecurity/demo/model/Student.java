@@ -1,4 +1,4 @@
-package com.springsecurity.demo;
+package com.springsecurity.demo.model;
 
 public class Student {
     private int id;
